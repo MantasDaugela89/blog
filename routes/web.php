@@ -42,3 +42,43 @@ Route::get('contact', function () {
 
     return view('contact', $data);
 });
+
+Route::get('program', function () {
+
+    $name = 'Mantas Daugela';
+    $activity = 'Active person';
+    $hobbies = 'Board sports';
+
+
+    $day1= [
+        'Barbell Bench Press - Medium Grip',
+        'Incline Dumbbell Press',
+        'Upright Cable Row',
+        'Crunches'
+    ];
+
+    $day2= [
+        'Standing Calf Raise',
+        'Lying Leg Curls',
+        'Barbell Squat',
+        'Leg Extensions'
+    ];
+
+    $day3= [
+        'Dumbbell Bench Press',
+        'Side Lateral Raise',
+        'Upright Barbell Row',
+        'Barbell Deadlift'
+    ];
+
+    $day4= [
+        'Lying Leg Curls',
+        'Barbell Squat',
+        'Hyperextensions (Back Extensions)',
+        'Crunches'
+    ];
+
+    $data = compact('name', 'activity', 'hobbies', 'day1', 'day2', 'day3', 'day4');
+
+    return view('program', $data);
+});
