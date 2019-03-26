@@ -25,23 +25,25 @@ Route::get('/', function () {
 Route::view('about', 'about'); // pirmas about tai adresas koks adreasas, antras about koks views file. Views trmpiau nei get
 //Route::view('contact', 'contact'); // pirmas about tai adresas koks adreasas, antras about koks views file. Views trmpiau nei get
 
-Route::get('contact', function () {
+Route::get('contact', 'ContactController@index');
 
-    $name = 'vardas';
-    $email = 'email';
-    $phone = 'numeris';
+// Route::resource('posts', 'PostController');
 
-    $interests= [
-        'kava',
-        'kaitai',
-        'krepsinis',
-        'kruopos'
-    ];
 
-    $data = compact('name', 'email', 'phone', 'interests');
+Route::get('posts', 'PostController@index')->name('posts.index');
+Route::get('posts/create', 'PostController@create')->name('posts.create');
 
-    return view('contact', $data);
-});
+Route::get('posts/{id}', 'PostController@show')->name('posts.show');
+
+
+
+
+
+
+
+
+
+
 
 Route::get('program', function () {
 
