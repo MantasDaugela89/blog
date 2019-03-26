@@ -46,6 +46,7 @@ Route::get('contact', function () {
 Route::get('program', function () {
 
     $name = 'Mantas Daugela';
+    $profileimage = 'https://bucket.mlcdn.com/a/1332/1332954/images/b3775874dff84aad3209ed980cc0404308085070.jpeg';
     $activity = 'Active person';
     $hobbies = 'Board sports';
 
@@ -78,7 +79,7 @@ Route::get('program', function () {
         'Crunches'
     ];
 
-    $data = compact('name', 'activity', 'hobbies', 'day1', 'day2', 'day3', 'day4');
+    $data = compact('name', 'activity', 'profileimage', 'hobbies', 'day1', 'day2', 'day3', 'day4');
 
     return view('program', $data);
 });

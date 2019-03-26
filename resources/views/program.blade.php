@@ -39,7 +39,7 @@
     <div class="container">
         <div class="row p-5">
             <div class="col-4">
-                <img src="https://bucket.mlcdn.com/a/1332/1332954/images/b3775874dff84aad3209ed980cc0404308085070.jpeg" class="rounded-circle" width="100%">
+                <img src="{{$profileimage}}" class="rounded-circle" width="100%">
             </div>
             <div class="col-4 d-flex justify-content-center">
                 <div class="info align-self-center">
